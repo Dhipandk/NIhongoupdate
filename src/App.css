@@ -177,33 +177,61 @@ input {
   position: fixed;
   bottom: 0px;
   width: 100%;
-  padding: 20px 30px;
+  padding: 10px 30px;
   background-color: #333333; /* Dark grey background */
-  
+  align-items: start;
   display: flex;
-  align-items: center;
   justify-content: space-between;
 }
 
-.send-message > input {
-  height: 40px;
-  padding: 10px 10px;
-  border-radius: 5px 0 0 5px;
+.translation-controls {
+  margin-bottom: 20px;
+}
+
+.language-select {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.language-select select {
+  margin: 0 10px;
+  padding: 10px;
   border: none;
-  flex-grow: 1;
-  background-color: #4a4a4a; /* Slightly lighter grey background */
-  color: #e0e0e0; /* Light grey text */
-  font-size: 1rem;
-
+  border-radius: 5px;
+  font-size: 16px;
 }
 
-.send-message > input:placeholder {
-  color: #c0c0c0; /* Slightly lighter grey text */
+.language-select button {
+  background-color: #4CAF50;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-.send-message > :is(input, button):focus {
-  outline: none;
-  border-bottom: 1px solid #7cc5d9; /* Light blue border for focus */
+.language-select button:hover {
+  background-color: #3e8e41;
+}
+
+.textarea {
+  width: 120%;
+  padding: 10px;
+  font-size: 16px;
+  transform: translateX(-46px);
+  border: none;
+  border-radius: 5px;
+  resize: vertical;
+}
+
+.form-input__input {
+  padding: 10px 20px;
+  font-size: 16px;
+  transform: translateX(-40px);
+  border: none;
+  border-radius: 5px;
+  width: 20px;
 }
 
 .send-message > button {

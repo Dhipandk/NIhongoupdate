@@ -430,6 +430,7 @@ const NavBar = ({ currentRoom, setCurrentRoom, language, toggleLanguage }) => {
     setJoinRoomVisible(!joinRoomVisible);
     setMenuVisible(false);
   };
+  
 
   const googleSignIn = () => {
     const provider = new GoogleAuthProvider();
