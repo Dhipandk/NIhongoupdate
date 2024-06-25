@@ -234,7 +234,7 @@ input {
   width: 20px;
 }
 
-.send-message > button {
+.send{
   width: 60px;
   height: 40px;
   padding: 5px 5px;
@@ -243,12 +243,26 @@ input {
   border: 1px solid #edebeb; /* Slightly lighter grey border */
   background-color: #4a4a4a; /* Slightly lighter grey background */
   font-weight: 600;
+  transform: translateX(-20px);
 }
 
-.send-message > button:hover {
+.send:hover {
  background-color: #3a3a3a;
 }
+.mic-icon{
+  width: 40px;
+  height: 24px;
+  padding: 5px 5px;
+  border-radius: 0 5px 5px 0;
+  color: #dddada; /* Dark grey text */
+ /* Slightly lighter grey border */
+  background-color: #4a4a4a; /* Slightly lighter grey background */
+  font-weight: 600;
+}
 
+.mic-icon:hover {
+ background-color: #3a3a3a;
+}
 /* Overlay for modal */
 .modal-overlay {
   position: fixed;
@@ -493,6 +507,40 @@ header {
   margin: 30px auto;
   border-radius: 4px;
    /* Set the text color to white for better contrast */
+}
+.live-typing-indicator {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+}
+
+.typing-user {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.typing-avatar {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.typing-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.typing-content span {
+  font-size: 14px;
+  color: #888;
+}
+
+.typing-content p {
+  margin: 2px 0;
+  font-size: 14px;
+  color: #444;
 }
 
 

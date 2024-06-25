@@ -57,6 +57,7 @@ import { query, collection, orderBy, onSnapshot, where, limit } from "firebase/f
 import { db } from "./Firebase";
 import Message from "./Message";
 import SendMessage from "./SendMessage";
+import LiveTypingIndicator from "./LiveTypingIndicator";
 
 const ChatBox = ({ currentRoom, preferences }) => {
   const [messages, setMessages] = useState([]);
@@ -105,6 +106,7 @@ const ChatBox = ({ currentRoom, preferences }) => {
     }
   }, [messages]);
 
+
   const groupedMessages = groupMessagesByDate(messages);
 
   if (!currentRoom) {
@@ -121,10 +123,13 @@ const ChatBox = ({ currentRoom, preferences }) => {
             {groupedMessages[date].map((message) => (
               <Message key={message.id} message={message} />
             ))}
+            <LiveTypingIndicator currentRoom={currentRoom} />
           </div>
+          
         ))}
       </div>
       <span ref={scroll}></span>
+      
       <SendMessage scroll={scroll} currentRoom={currentRoom} preferences={preferences} />
     </main>
   );
