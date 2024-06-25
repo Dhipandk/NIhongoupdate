@@ -98,12 +98,19 @@ const ChatBox = ({ currentRoom, preferences }) => {
       return groups;
     }, {});
   };
+  
+  useEffect(() => {
+    if (scroll.current) {
+      scroll.current.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [messages]);
 
   const groupedMessages = groupMessagesByDate(messages);
 
   if (!currentRoom) {
     return <div className="chat-box">Please join a room to start chatting.</div>;
   }
+  
 
   return (
     <main className="chat-box">
@@ -124,4 +131,3 @@ const ChatBox = ({ currentRoom, preferences }) => {
 };
 
 export default ChatBox;
-
